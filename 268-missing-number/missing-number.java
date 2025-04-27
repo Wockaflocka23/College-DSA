@@ -1,16 +1,17 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        int n = nums.length;
-        for (int i = 0; i <= n; i++) {
-            for (int j = 0; j < nums.length; j++) {
-                if (i == nums[j]) {
-                    break;
-                }
-                if (j == nums.length - 1) {
-                    return i;
-                }
+        int n=nums.length;
+        Arrays.sort(nums);
+        for(int i=0;i<=n-1;i++){
+            if(nums[i]!=i){
+                return i;
             }
+            
+            
+            
+            
         }
-        return -1;
-    }
+
+        return n;
+    }   
 }
