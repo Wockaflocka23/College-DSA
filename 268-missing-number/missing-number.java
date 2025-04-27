@@ -1,17 +1,15 @@
 class Solution {
     public int missingNumber(int[] nums) {
         int n=nums.length;
-        Arrays.sort(nums);
-        for(int i=0;i<=n-1;i++){
-            if(nums[i]!=i){
-                return i;
-            }
+        int maxsum=0;
+        int sum=(n*(n+1)/2);
+        for(int i=0;i<=nums.length-1;i++){
+            maxsum+=nums[i];
+          
+                
             
             
-            
-            
-        }
-
-        return n;
-    }   
+             }
+              return sum-maxsum;
+    }
 }
