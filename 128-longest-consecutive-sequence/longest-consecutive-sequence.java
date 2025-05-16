@@ -3,28 +3,28 @@ class Solution {
         int n = nums.length;
         if (n == 0) return 0;
 
-        // Step 1: Sort the array
+      
         Arrays.sort(nums);
 
         int longest = 1;
         int cnt = 1;
 
-        // Step 2: Use traditional for loop
+       
         for (int i = 1; i < n; i++) {
             if (nums[i] == nums[i - 1]) {
-                // Skip duplicates
+               
                 continue;
             } else if (nums[i] == nums[i - 1] + 1) {
-                // Current number is consecutive
+               
                 cnt++;
             } else {
-                // Sequence broken, reset count
+               
                 longest = Math.max(longest, cnt);
                 cnt = 1;
             }
         }
 
-        // Step 3: Final check in case the longest sequence ends at the last element
+       
         longest = Math.max(longest, cnt);
 
         return longest;
