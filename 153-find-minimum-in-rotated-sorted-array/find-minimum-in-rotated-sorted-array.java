@@ -6,12 +6,12 @@ class Solution {
             int mid = low + (high - low) / 2;
 
             if (nums[mid] < nums[high]) {
-                high = mid; // Keep mid as potential minimum
+                high = mid; 
             } else {
-                low = mid + 1; // Move right
+                low = mid + 1; 
             }
         }
 
-        return nums[low]; // The minimum element
+        return nums[low];
     }
 }
